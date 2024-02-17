@@ -1,0 +1,23 @@
+{
+  "name": "rleal/playground",
+  "description": "PHP Example Codes",
+  "autoload": {
+    "psr-4": {
+      "Rleal\\Playground\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Rogerio Leal"
+    }
+  ],
+  "require-dev": {
+    "laravel/pint": "^1.13"
+  },
+  "scripts": {
+    "format": "./vendor/bin/pint"
+  }
+}
