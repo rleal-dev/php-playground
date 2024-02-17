@@ -12,6 +12,8 @@ class User implements JsonSerializable
 
     private string $email;
 
+    private array $stacks;
+
     public function getName(): string
     {
         return $this->name;
@@ -32,6 +34,18 @@ class User implements JsonSerializable
     public function setEmail(string $email)
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getStacks(): array
+    {
+        return $this->stacks;
+    }
+
+    public function setStacks(array $stacks)
+    {
+        $this->stacks = $stacks;
 
         return $this;
     }

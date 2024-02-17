@@ -11,20 +11,20 @@ if (! function_exists('dd')) {
 }
 
 if (! function_exists('array_to_xml')) {
-    function array_to_xml(array $array, ?string $rootElement = null): string|bool
+    function array_to_xml(array $array, ?string $rootElement = null, $xml = null): string|bool
     {
-        $xml = new SimpleXMLElement($rootElement ?? '<root/>');
+        $_xml = $xml ?? new SimpleXMLElement($rootElement ?? '<root/>');
 
         foreach ($array as $key => $value) {
             if (is_array($value)) {
-                array_to_xml($value, $key, $xml->addChild($key));
+                array_to_xml($value, $key, $_xml->addChild($key));
 
                 continue;
             }
 
-            $xml->addChild($key, $value);
+            $_xml->addChild($key, $value);
         }
 
-        return $xml->asXML();
+        return $_xml->asXML();
     }
 }
