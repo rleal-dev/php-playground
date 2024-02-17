@@ -50,4 +50,9 @@ class User implements JsonSerializable
     {
         return json_encode($this);
     }
+
+    public function toXML(): string
+    {
+        return array_to_xml($this->toArray());
+    }
 }

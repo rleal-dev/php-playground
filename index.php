@@ -4,10 +4,12 @@ require_once 'vendor/autoload.php';
 
 use Rleal\Playground\User;
 
-// Object to Array / Json
+header('Content-Type: application/json; charset=utf-8');
+
+// Object to Array/Json/XML
 $user = (new User)
     ->setName('User Name')
-    ->setEmail('user@email.com');
+    ->setEmail('user@email.com')
+    ->toJson();
 
-dd($user->toArray());
-dd($user->toJson());
+dd($user);
