@@ -20,8 +20,8 @@ $userXML = $user->toXML();
 
 // Object DTO
 $userDTO = new UserDTO(...$userArray);
-$userDTO = UserDTO::fromArray($userArray);
-$userDTO = UserDTO::fromJson($userJson);
-$userDTO = UserDTO::from($user);
+// $userDTO = UserDTO::fromArray($userArray);
+// $userDTO = UserDTO::fromJson($userJson);
+// $userDTO = UserDTO::from($user);
 
-dd($userDTO);
+dd($userDTO->toArray());

@@ -50,14 +50,14 @@ class User implements JsonSerializable
         return $this;
     }
 
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): array
     {
         return get_object_vars($this);
     }
 
     public function toArray(): array
     {
-        return (array) get_object_vars($this);
+        return get_object_vars($this);
     }
 
     public function toJson(): string

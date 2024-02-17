@@ -34,4 +34,9 @@ readonly class UserDTO
             default => throw new Exception('Invalid resource type'),
         };
     }
+
+    public function toArray(): array
+    {
+        return get_object_vars($this);
+    }
 }

@@ -1,7 +1,7 @@
 <?php
 
 if (! function_exists('dd')) {
-    function dd($data): void
+    function dd(...$data): void
     {
         echo '<pre>';
         var_dump($data);
