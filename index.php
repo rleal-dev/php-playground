@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use Rleal\Playground\{User, UserDTO};
+use Rleal\Playground\{Command, User, UserDTO};
 
 // Object to Array/Json/XML
 $user = (new User())
@@ -24,4 +24,6 @@ $userDTO = new UserDTO(...$userArray);
 // $userDTO = UserDTO::fromJson($userJson);
 // $userDTO = UserDTO::from($user);
 
-dd($userDTO->toArray());
+// dd($userDTO->toArray());
+
+$command = (new Command())->run();
