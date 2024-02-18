@@ -42,17 +42,17 @@ class Collection implements Iterator
         return isset($this->items[$key]);
     }
 
-    public function exists()
+    public function exists(): bool
     {
         return $this->count() > 0;
     }
 
-    public function isEmpty()
+    public function isEmpty(): bool
     {
         return $this->count() === 0;
     }
 
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
@@ -79,7 +79,7 @@ class Collection implements Iterator
         return $this;
     }
 
-    public function get()
+    public function get(): array
     {
         return $this->items;
     }

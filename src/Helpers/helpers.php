@@ -3,12 +3,19 @@
 use Rleal\Playground\Collections\Collection;
 
 if (! function_exists('dd')) {
-    function dd(...$data): void
+    function dd($data): void
+    {
+        dump($data);
+        exit();
+    }
+}
+
+if (! function_exists('dump')) {
+    function dump(...$data): void
     {
         echo '<pre>';
         var_dump($data);
         echo '</pre>';
-        exit();
     }
 }
 
