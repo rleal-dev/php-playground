@@ -18,7 +18,7 @@ echo $obj;
 dump($obj);
 
 // Set / Get
-$obj2 = new SetGet;
+$obj2 = new SetGet();
 $obj2->name = 'User Name';
 dump($obj2->name);
 
