@@ -1,5 +1,7 @@
 <?php
 
+use Rleal\Playground\Collections\Collection;
+
 if (! function_exists('dd')) {
     function dd(...$data): void
     {
@@ -26,5 +28,12 @@ if (! function_exists('array_to_xml')) {
         }
 
         return $_xml->asXML();
+    }
+}
+
+if (! function_exists('collect')) {
+    function collect(array $array): Collection
+    {
+        return new Collection($array);
     }
 }
