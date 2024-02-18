@@ -6,7 +6,7 @@
       "Rleal\\Playground\\": "src/"
     },
     "files": [
-      "src/helpers.php"
+      "src/Helpers/helpers.php"
     ]
   },
   "authors": [

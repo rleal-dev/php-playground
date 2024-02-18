@@ -1,38 +1,8 @@
 <?php
 
-namespace Rleal\Playground;
+namespace Rleal\Playground\Commands;
 
 use ReflectionClass;
-
-class FirstCommand
-{
-    public string $signature = 'First Command';
-
-    public function handle(): bool
-    {
-        return true;
-    }
-}
-
-class SecondCommand
-{
-    public string $signature = 'Second Command';
-
-    public function handle(): bool
-    {
-        return true;
-    }
-}
-
-class ThirdCommand
-{
-    public string $signature = 'Third Command';
-
-    public function handle(): bool
-    {
-        return true;
-    }
-}
 
 class Command
 {
