@@ -2,7 +2,7 @@
 
 require_once '../../vendor/autoload.php';
 
-use Rleal\Playground\Magic\{Invoke, MyClass};
+use Rleal\Playground\Magic\{Invoke, MyClass, SetGet};
 
 // Construct / Destruct
 $obj = new MyClass();
@@ -15,8 +15,13 @@ MyClass::myMethod('CallStatic test');
 echo $obj;
 
 // DegugInfo
-var_dump($obj);
+dump($obj);
+
+// Set / Get
+$obj2 = new SetGet;
+$obj2->name = 'User Name';
+dump($obj2->name);
 
 // Invoke
 $invoke = new Invoke();
-dd($invoke());
+dump($invoke());

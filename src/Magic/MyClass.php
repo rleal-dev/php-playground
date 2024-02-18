@@ -29,7 +29,7 @@ class MyClass
     public function __debugInfo()
     {
         return [
-            'property' => 'teste',
+            'property' => 'test',
         ];
     }
 
